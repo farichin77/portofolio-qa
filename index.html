@@ -3,11 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ahmad's Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Ahmad Farichin - QA Engineer Portfolio</title>
+  <meta name="description" content="Portfolio of Ahmad Farichin, a passionate QA Engineer with expertise in manual and automation testing. Check out my projects and skills.">
+  <meta name="keywords" content="QA Engineer, Software Tester, Manual Testing, Automation Testing, Portfolio, Ahmad Farichin">
+  <meta name="author" content="Ahmad Farichin">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ahmad-farichin.vercel.app/">
+  <meta property="og:title" content="Ahmad Farichin - QA Engineer Portfolio">
+  <meta property="og:description" content="Portfolio of Ahmad Farichin, a passionate QA Engineer with expertise in manual and automation testing.">
+  <meta property="og:image" content="https://ahmad-farichin.vercel.app/asset/ahmad.JPG">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://ahmad-farichin.vercel.app/">
+  <meta property="twitter:title" content="Ahmad Farichin - QA Engineer Portfolio">
+  <meta property="twitter:description" content="Portfolio of Ahmad Farichin, a passionate QA Engineer with expertise in manual and automation testing.">
+  <meta property="twitter:image" content="https://ahmad-farichin.vercel.app/asset/ahmad.JPG">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#4A90E2">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://ahmad-farichin.vercel.app/">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
   <div id="particles-js" class="particles"></div>
@@ -317,50 +347,37 @@
   </section>
   <footer>
    <div class="social-links">
-      <a href="https://twitter.com/yourusername" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-      <a href="https://www.instagram.com/yourusername" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://linkedin.com/in/ahmadfarichin" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://github.com/yourusername" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-      <a href="https://dribbble.com/yourusername" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-dribbble"></i></a>
+      <a href="https://www.linkedin.com/in/ahmad-farichin-b73512271/" class="social-link" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://github.com/farichin77" class="social-link" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="mailto:ahmadfarichin98@gmail.com" class="social-link" target="_blank">
+        <i class="fas fa-envelope"></i>
+      </a>
     </div>
-     <p class="copyright">© 2025 Ahmad Farichin. All rights reserved.</p>
+    <p class="copyright">&copy; 2024 Ahmad Farichin. All rights reserved.</p>
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <!-- EmailJS SDK -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script type="text/javascript">
-    // Initialize EmailJS with your public key
-    (function() {
-      emailjs.init('Q4TgClcs3zkPxDeQC');
-      console.log('EmailJS initialized');
-    })();
-    
-    // Test EmailJS connection
-    function testEmailJS() {
-      console.log('Testing EmailJS connection...');
-      emailjs.send('service_32ulypy', 'template_55ri8z9', {
-        from_name: 'Test User',
-        from_email: 'test@example.com',
-        subject: 'Test Email',
-        message: 'This is a test email from EmailJS',
-        reply_to: 'test@example.com'
-      })
-      .then(function(response) {
-        console.log('EmailJS Test Success!', response.status, response.text);
-        alert('Test email sent successfully! Check your email.');
-      }, function(error) {
-        console.error('EmailJS Test Failed:', {
-          status: error.status,
-          text: error.text,
-          message: error.message
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+
+    // Initialize particles.js after DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof particlesJS !== 'undefined') {
+        particlesJS.load('particles-js', './js/particles.json', function() {
+          console.log('Particles.js loaded successfully');
         });
-        alert('Test email failed. Check console for details.');
-      });
-    }
+      }
+    });
   </script>
-  <script src="js/script.js"></script>
+  <script src="./js/script.js"></script>
   <style>
     #test-emailjs {
       position: fixed;
