@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahmad's Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="particles-js" class="particles"></div>
+  <div class="bg-wrapper">
+  <div class="bg-gradient"></div>
+  <div class="bg-pattern"></div>
+  <div class="bg-shapes">
+    <div class="bg-shape bg-shape-1"></div>
+    <div class="bg-shape bg-shape-2"></div>
+    <div class="bg-shape bg-shape-3"></div>
+  </div>
+</div>
+
+  <nav>
+    <div class="nav-logo">Ahmad</div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="mobile-menu-btn">
+      <i class="fas fa-bars"></i>
+    </button>
+  </nav>
+
+  <header id="home" class="hero">
+    <div class="hero-content" data-aos="fade-right">
+      <h1>Hi, I'm <span>Ahmad Farichin</span></h1>
+      <div class="typewriter" id="typewriter"></div>
+      <p>Passionate QA Engineer with expertise in manual and automation testing. Dedicated to ensuring software quality through comprehensive testing strategies and innovative automation solutions.</p>
+      <div class="btn-group">
+        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+        <a href="#portfolio" class="btn btn-outline">View My Work</a>
+      </div>
+    </div>
+    <img src="asset/foto.jpeg" alt="Ahmad Farichin" class="profile-pic" data-aos="fade-left">
+  </header>
+
+  <section id="about">
+    <h2 data-aos="fade-right">About Me</h2>
+    <div class="about-content slide-in-left">
+      <div class="about-text" data-aos="fade-right" style="width:100%;">
+        <p style="margin-bottom:1.5rem;">I am an enthusiastic learner with a strong interest in software quality assurance. Although I do not yet have direct professional experience as a QA, I am passionate about technology and eager to grow in this field. My journey began with curiosity about how reliable digital products are built, which has inspired me to study QA principles, testing tools, and best practices independently. I am adaptable, a fast learner, and enjoy collaborating with others to achieve great results. I am committed to continuous improvement and ready to contribute my dedication and fresh perspective to a QA team.</p>
+        <div class="btn-group" style="margin-top: 2rem;">
+          <a href="asset/cv_ahmad_farichin.pdf?v=1" class="btn btn-primary" download="Ahmad_Farichin_CV.pdf">Download CV</a>
+          <a href="#skills" class="btn btn-outline">My Skills</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2 data-aos="fade-right">Education</h2>
+    <div class="skills-container">
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="100">
+        <div class="slide-in-left">
+        <i class="fas fa-graduation-cap"></i>
+        <h3>S1 Sistem Informasi</h3>
+        <p>Universitas Panca Sakti Bekasi, Cikarang, Jawa Barat</p>
+        <p style="font-size: 0.9em; margin-top: 0.5rem;">September 2019 – Agustus 2023</p>
+        <p style="font-size: 0.9em; margin-top: 0.25rem;">• Meraih IPK 3,50 / 4,00</p>
+        <p style="font-size: 0.9em; margin-top: 0.25rem;">• Mata kuliah relevan: Algoritma Pemrogaman, Pemrogaman Berorientasi Objek, Pemrogaman Database, Uji Kualitas dan Pemeliharaan Sistem Informasi</p>
+      </div>
+      </div>
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="200">
+        <div class="slide-in-right">
+        <i class="fas fa-tools"></i>
+        <h3>Quality Assurance Bootcamp</h3>
+        <p>Dibimbing.id</p>
+        <p style="font-size: 0.9em; margin-top: 0.5rem;">Agustus 2025 - Present</p>
+        <p style="font-size: 0.9em; margin-top: 0.25rem;">• Mempelajari konsep SDLC & STLC dalam pengembangan perangkat lunak</p>
+        <p style="font-size: 0.9em; margin-top: 0.25rem;">• Menyusun test planning, test case, dan bug report sesuai standar industri</p>
+        <p style="font-size: 0.9em; margin-top: 0.25rem;">• Praktik manual testing pada web dan mobile project</p>
+        <p style="font-size: 0.9em; margin-top: 0.25rem;">• Dasar automation testing menggunakan Selenium/Katalon dan TestNG</p>
+        <p style="font-size: 0.9em; margin-top: 0.25rem;">• API testing dengan Postman serta database testing dengan SQL</p>
+        <p style="font-size: 0.9em; margin-top: 0.25rem;">• Penerapan tools industri seperti Jira untuk bug tracking</p>
+        </div>
+        </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 data-aos="fade-right">My Skills</h2>
+   
+  <div class="skills-container">
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="100">
+        <div class="slide-in-left">
+        <i class="fas fa-vial"></i>
+        <h3>Manual Testing</h3>
+        <p>Test case design, exploratory testing</p>
+      </div>
+      </div>
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="200">
+        <div class="slide-in-right">
+        <i class="fas fa-robot"></i>
+        <h3>Automation Testing</h3>
+        <p>Selenium, katalon studio</p>
+      </div>
+      </div>
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="300">
+        <div class="slide-in-left">
+        <i class="fas fa-tasks"></i>
+        <h3>Test Management</h3>
+        <p>Jira, TestRail, Bug Tracking</p>
+      </div>
+      </div>
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="400">
+        <div class="slide-in-right">
+        <i class="fas fa-plug"></i>
+        <h3>API Testing</h3>
+        <p>Postman, Rest Assured</p>
+      </div>
+      </div>
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="500">
+        <div class="slide-in-right">
+        <i class="fas fa-database"></i>
+        <h3>SQL</h3>
+        <p>Database Validation</p>
+      </div>
+      </div>
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="600">
+        <div class="slide-in-left">
+        <i class="fab fa-git-alt"></i>
+        <h3>Version Control</h3>
+        <p>Git, GitHub</p>
+      </div>
+      </div>
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="700">
+        <div class="slide-in-right">
+        <i class="fas fa-users"></i>
+        <h3>Agile & Scrum</h3>
+        <p>Team Collaboration</p>
+      </div>
+      </div>
+      <div class="skill-box" data-aos="fade-up" data-aos-delay="800">
+        <div class="slide-in-left">
+        <i class="fas fa-pencil-alt"></i>
+        <h3>Documentation</h3>
+        <p>Test Plan, Reporting</p>
+      </div>
+      </div>
+  </div>
+  </section>
+
+  <section id="portfolio">
+    <h2 data-aos="fade-right">My last Projects</h2>
+    <div class="portfolio-grid">
+      <div class="project-card" data-aos="fade-up">
+        <div class="slide-in-left">
+        <img src="asset/swaglabs.PNG" alt="Saucedemo Automation" class="project-image">
+        <div class="project-info">
+          <h3>Saucedemo Automation</h3>
+          <p>Automation testing project for the saucedemo.com web application using Selenium WebDriver with Java. Covers login, product selection, cart, and checkout scenarios with assertions and reporting. Implements Page Object Model, TestNG, Allure reporting, and best practices for maintainable test automation.</p>
+          <div class="project-tags">
+            <span class="tag">Selenium</span>
+            <span class="tag">Java</span>
+            <span class="tag">TestNG</span>
+            <span class="tag">Allure</span>
+            <span class="tag">Automation</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/farichin77/saucedemo-automation" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
+          </div>
+        </div>
+      </div>
+      </div>
+      <!-- Tambahan project qademo -->
+      <div class="project-card" data-aos="fade-up">
+        <div class="slide-in-right">
+        <img src="asset/bank99.png" alt="Guru99 Bank Automation" class="project-image">
+        <div class="project-info">
+          <h3>Guru99 Bank Automation</h3>
+          <p>Automation testing untuk aplikasi web Bank Guru99 menggunakan <span style="color:#1a73e8; font-weight:bold">Katalon Studio</span>. Mencakup skenario login, pembuatan customer, pembukaan akun, transaksi, dan validasi data dengan struktur test case yang jelas, data-driven testing, serta reporting terintegrasi.</p>
+          <div class="project-tags">
+            <span class="tag">Katalon Studio</span>
+            <span class="tag">Automation</span>
+            <span class="tag">QA</span>
+            <span class="tag">Web</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/farichin77/katalon_bank_guru99.git" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
+          </div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="quote-card" data-aos="zoom-in">
+      <p>"I believe that being adaptable is essential in the digital age. I embrace change, learn quickly, and see QA as a collaborative tool to enhance software quality. By combining creativity with technology, we can build meaningful solutions."</p>
+      <div class="author">— Ahmad Farichin</div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 data-aos="fade-right">Get In Touch</h2>
+    <div class="contact-container">
+      <div class="contact-info" data-aos="fade-right">
+        <div class="contact-item">
+          <div class="slide-in-left">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-text">
+            <h3>Email</h3>
+            <a href="mailto:ahmadfarichin98@gmail.com">ahmadfarichin98@gmail.com</a>
+          </div>
+        </div>
+        </div>
+        <div class="contact-item">
+          <div class="slide-in-right">
+          <div class="contact-icon">
+            <i class="fab fa-github"></i>
+          </div>
+          <div class="contact-text">
+            <h3>GitHub</h3>
+            <a href="https://github.com/farichin77" target="_blank">github.com/farichin77</a>
+          </div>
+        </div>
+        </div>
+        <div class="contact-item">
+          <div class="slide-in-left">
+          <div class="contact-icon">
+            <i class="fab fa-linkedin"></i>
+          </div>
+          <div class="contact-text">
+            <h3>LinkedIn</h3>
+            <a href="https://www.linkedin.com/in/ahmad-farichin-b73512271/" target="_blank">https://www.linkedin.com/in/ahmad-farichin-b73512271/</a>
+          </div>
+        </div>
+        </div>
+        <div class="contact-item">
+          <div class="slide-in-right">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-text">
+            <h3>Location</h3>
+            <p>Jakarta, Indonesia</p>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="contact-form" data-aos="fade-left">
+        <form id="contact-form" action="https://formspree.io/f/xrgnqyvl" method="POST">
+          <!-- Formspree Configuration -->
+          <input type="hidden" name="_language" value="id">
+          <input type="hidden" name="_next" value="/thank-you">
+          <input type="text" name="_gotcha" style="display:none">
+          <input type="hidden" name="_subject" value="Pesan Baru dari Portofolio">
+          
+          <!-- Form Fields -->
+          <div class="form-group">
+            <label for="name">Nama Anda</label>
+            <input type="text" id="name" name="name" class="form-control" required 
+                   placeholder="Masukkan nama Anda">
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Alamat Email</label>
+            <input type="email" id="email" name="email" class="form-control" required
+                   placeholder="email@contoh.com">
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">Subjek</label>
+            <input type="text" id="subject" name="_subject" class="form-control" required
+                   placeholder="Tentang apa pesan Anda?">
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Pesan</label>
+            <textarea id="message" name="message" class="form-control" rows="5" required
+                     placeholder="Tulis pesan Anda di sini..."></textarea>
+          </div>
+          
+          <!-- Status Message -->
+          <div id="form-status" style="margin: 1rem 0; padding: 12px; border-radius: 4px; display: none;"></div>
+          
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary" id="submit-btn" style="position: relative;">
+            <span class="button-text">Kirim Pesan</span>
+            <span class="button-spinner" style="display: none; margin-left: 8px;">
+              <i class="fas fa-spinner fa-spin"></i> Mengirim...
+            </span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <footer>
+   <div class="social-links">
+      <a href="https://twitter.com/yourusername" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/yourusername" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com/in/ahmadfarichin" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/yourusername" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+      <a href="https://dribbble.com/yourusername" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-dribbble"></i></a>
+    </div>
+     <p class="copyright">© 2025 Ahmad Farichin. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    // Initialize EmailJS with your public key
+    (function() {
+      emailjs.init('Q4TgClcs3zkPxDeQC');
+      console.log('EmailJS initialized');
+    })();
+    
+    // Test EmailJS connection
+    function testEmailJS() {
+      console.log('Testing EmailJS connection...');
+      emailjs.send('service_32ulypy', 'template_55ri8z9', {
+        from_name: 'Test User',
+        from_email: 'test@example.com',
+        subject: 'Test Email',
+        message: 'This is a test email from EmailJS',
+        reply_to: 'test@example.com'
+      })
+      .then(function(response) {
+        console.log('EmailJS Test Success!', response.status, response.text);
+        alert('Test email sent successfully! Check your email.');
+      }, function(error) {
+        console.error('EmailJS Test Failed:', {
+          status: error.status,
+          text: error.text,
+          message: error.message
+        });
+        alert('Test email failed. Check console for details.');
+      });
+    }
+  </script>
+  <script src="js/script.js"></script>
+</body>
+</html>

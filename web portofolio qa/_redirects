@@ -1,0 +1,5 @@
+# Handle client-side routing, all requests to /thank-you should go to /thank-you.html
+/thank-you  /thank-you.html  200
+
+# Handle CV file download
+/asset/cv_qa_engineer.pdf  /asset/cv_qa_engineer.pdf  200
