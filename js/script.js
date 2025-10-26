@@ -1,8 +1,72 @@
-// script.js
-   AOS.init({
-      duration: 800,
-      once: true
+// Initialize AOS
+AOS.init({
+  duration: 800,
+  once: true
+});
+
+// Project expansion functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const projectHeaders = document.querySelectorAll('.project-header');
+
+    projectHeaders.forEach(header => {
+        // make header keyboard-focusable
+        header.setAttribute('tabindex', '0');
+
+        header.addEventListener('click', function() {
+            const content = this.nextElementSibling;
+            const toggle = this.querySelector('.project-toggle');
+
+            // Toggle active class on content and toggle button
+            const isActive = content.classList.toggle('active');
+            toggle.classList.toggle('active');
+
+            // Set max-height for smooth animation
+            if (isActive) {
+                content.style.maxHeight = content.scrollHeight + 'px';
+            } else {
+                content.style.maxHeight = 0;
+            }
+
+            // accessibility
+            toggle.setAttribute('aria-expanded', isActive);
+        });
+
+        // allow Enter / Space to toggle
+        header.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
+            }
+        });
     });
+
+    // 'reading' buttons open the breakdown directly
+    const readingButtons = document.querySelectorAll('.project-reading');
+    readingButtons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const card = this.closest('.project-card');
+            if (!card) return;
+            const header = card.querySelector('.project-header');
+            const content = card.querySelector('.project-content');
+            const toggle = card.querySelector('.project-toggle');
+
+            // Toggle content (open if closed, close if open)
+            const isActive = content.classList.toggle('active');
+            toggle.classList.toggle('active');
+
+            if (isActive) {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                // scroll into view so user sees the opened content
+                header.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } else {
+                content.style.maxHeight = 0;
+            }
+
+            toggle.setAttribute('aria-expanded', isActive);
+        });
+    });
+});
 
     // Mobile menu toggle
     const menuBtn = document.querySelector('.mobile-menu-btn');
@@ -183,6 +247,54 @@
       });
     }
   });
+});
+
+// Gallery navigation (prev/next) for project galleries
+document.addEventListener('DOMContentLoaded', function() {
+    const wrappers = document.querySelectorAll('.project-gallery-wrapper');
+    wrappers.forEach(wrapper => {
+        const gallery = wrapper.querySelector('.project-gallery');
+        const prev = wrapper.querySelector('.gallery-prev');
+        const next = wrapper.querySelector('.gallery-next');
+        if (!gallery || !prev || !next) return;
+
+        // compute scroll step based on first thumbnail width + gap
+            function getStep() {
+                const item = gallery.querySelector('a');
+                const img = gallery.querySelector('img');
+                // read computed gap if supported, fallback to 10
+                const style = window.getComputedStyle(gallery);
+                const gapVal = style.gap || style.columnGap || '10px';
+                const gap = parseFloat(gapVal) || 10;
+                const itemWidth = item ? item.getBoundingClientRect().width : (img ? img.getBoundingClientRect().width : 180);
+                return Math.round(itemWidth + gap);
+            }
+
+        function updateButtons() {
+            prev.disabled = gallery.scrollLeft <= 2;
+            // allow small epsilon
+            next.disabled = gallery.scrollLeft + gallery.clientWidth >= gallery.scrollWidth - 2;
+        }
+
+        prev.addEventListener('click', function(e) {
+            e.stopPropagation();
+            gallery.scrollBy({ left: -getStep(), behavior: 'smooth' });
+            setTimeout(updateButtons, 300);
+        });
+
+        next.addEventListener('click', function(e) {
+            e.stopPropagation();
+            gallery.scrollBy({ left: getStep(), behavior: 'smooth' });
+            setTimeout(updateButtons, 300);
+        });
+
+        // update on resize and scroll
+        gallery.addEventListener('scroll', updateButtons);
+        window.addEventListener('resize', updateButtons);
+
+        // initial state
+        updateButtons();
+    });
 });
 
 // Contact Form Functionality with Formspree
