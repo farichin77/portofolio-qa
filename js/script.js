@@ -358,11 +358,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const message = formData.get('message')?.trim();
             
             if (!name || !email || !subject || !message) {
-                throw new Error('Mohon lengkapi semua field yang wajib diisi.');
+                throw new Error('Please complete all required fields.');
             }
             
             if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-                throw new Error('Format email tidak valid.');
+                throw new Error('Invalid email format.');
             }
             
             // Submit the form
@@ -376,7 +376,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             
             if (response.ok) {
-                showFormStatus('Pesan berhasil dikirim! Mengarahkan ke halaman terima kasih...', 'success');
+                showFormStatus('Message sent successfully! Redirecting to the thank you page...', 'success');
                 
                 // Reset form
                 contactForm.reset();
@@ -396,13 +396,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     const errorMessages = Object.values(errorData.errors).flat();
                     throw new Error(errorMessages.join(', '));
                 } else {
-                    throw new Error('Terjadi kesalahan saat mengirim pesan. Silakan coba lagi nanti.');
+                    throw new Error('An error occurred while sending the message. Please try again later.');
                 }
             }
             
         } catch (error) {
             console.error('Form submission failed:', error);
-            showFormStatus(error.message || 'Terjadi kesalahan. Silakan coba lagi nanti.');
+            showFormStatus(error.message || 'Something went wrong. Please try again later.');
             
         } finally {
             // Reset button state
